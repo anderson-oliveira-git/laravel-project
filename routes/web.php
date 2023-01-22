@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CidadeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [CidadeController::class, 'listCidades'])->name('index');
+
+Route::get('adicionar', [CidadeController::class, 'addCidade'])->name('adicionar.cidade');
+Route::post('cidade/salvar', [CidadeController::class, 'storeCidade'])->name('salvar.cidade');
+Route::get('cidade/{idCidade}', [CidadeController::class, 'destroyCidade'])->name('deletar.cidade');
