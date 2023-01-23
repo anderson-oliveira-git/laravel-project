@@ -25,6 +25,8 @@ class CidadeController extends Controller
             'nome' => $request->nome,
         ]);
 
+        session()->flash('sucesso', "Cidade $request->nome adicionada com sucesso.");
+
         return redirect()->route('index');
     }
 

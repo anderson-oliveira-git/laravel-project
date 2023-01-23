@@ -19,8 +19,10 @@
                     <tr>
                         <td class="left-align">{{ $cidade->nome }}</td>
                         <td class="right-align">
-                           <a href="{{ route('deletar.cidade', ['idCidade' => $cidade->id])  }}" class="btn btn-small red waves-effect">Excluir</a>
-                           <a href="" class="btn btn-small waves-effect">Editar</a>
+                            <a href="{{ route('deletar.cidade', ['idCidade' => $cidade->id])  }}" class="btn btn-small red waves-effect">
+                                <i class="material-icons">delete_forever</i>
+                            </a>
+                            <a href="" class="btn btn-small waves-effect"><i class="material-icons">edit</i></a>
                         </td>
                     </tr>
                 @endforeach
@@ -32,5 +34,6 @@
                 <i class="material-icons">add</i>
             </a>
         </div>
+
     </section>
 @endsection
