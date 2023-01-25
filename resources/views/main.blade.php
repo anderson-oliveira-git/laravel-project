@@ -20,6 +20,10 @@
             @if (session('sucesso'))
                 M.toast({html: "{{ session('sucesso') }}"})
             @endif
+
+            @if(session('deletado'))
+                M.toast({html: "{{ session('deletado') }}"})
+            @endif
         </script>
     </body>
 </html>

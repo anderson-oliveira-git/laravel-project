@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Cidade;
 use Illuminate\Http\Request;
+use App\Http\Requests\CidadeRequest;
 
 class CidadeController extends Controller
 {
@@ -19,7 +20,7 @@ class CidadeController extends Controller
         return view('pages.form');
     }
 
-    public function storeCidade(Request $request)
+    public function storeCidade(CidadeRequest $request)
     {
         Cidade::create([
             'nome' => $request->nome,
@@ -34,6 +35,8 @@ class CidadeController extends Controller
     {
         $cidade = Cidade::find($idCidade);
         $cidade->delete();
+
+        session()->flash('deletado', "A cidade $cidade->nome foi deletada com sucesso!");
 
         return redirect()->route('index');
     }
