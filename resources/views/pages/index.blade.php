@@ -15,15 +15,21 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($cidades as $cidade)                    
+                @forelse($cidades as $cidade)                    
                     <tr>
                         <td class="left-align">{{ $cidade->nome }}</td>
                         <td class="right-align">
-                           <a href="{{ route('deletar.cidade', ['idCidade' => $cidade->id])  }}" class="btn btn-small red waves-effect">Excluir</a>
-                           <a href="" class="btn btn-small waves-effect">Editar</a>
+                            <a href=""><i class="material-icons teal-text">edit</i></a>
+                            <a href="{{ route('deletar.cidade', $cidade->id) }}">
+                                <i class="material-icons red-text">delete_forever</i>
+                            </a>
                         </td>
                     </tr>
-                @endforeach
+                @empty
+                    <tr>
+                        <td colspan="2">Não existem cidades cadastradas.</td>
+                    </tr>
+                @endforelse
             </tbody>
         </table>
 
@@ -32,5 +38,6 @@
                 <i class="material-icons">add</i>
             </a>
         </div>
+
     </section>
 @endsection
