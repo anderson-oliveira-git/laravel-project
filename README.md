@@ -66,4 +66,9 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 ## Tela inicial do sistema
-![index](https://user-images.githubusercontent.com/6682086/213899300-a2acf99a-a598-4b19-9902-abdc31efa9ee.png)
+![Sem título](https://user-images.githubusercontent.com/6682086/214455284-cb1c9717-7fde-4aab-adfe-4e986ec549e3.png)
+
+## Tela de cadastro do nome da cidade
+![Sem título](https://user-images.githubusercontent.com/6682086/214455499-8704f13d-5147-434f-8b38-49e35ebcd48d.png)
+
+
