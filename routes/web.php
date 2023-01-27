@@ -14,8 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [CidadeController::class, 'listCidades'])->name('index');
-
-Route::get('adicionar', [CidadeController::class, 'addCidade'])->name('adicionar.cidade');
-Route::post('cidade/salvar', [CidadeController::class, 'storeCidade'])->name('salvar.cidade');
-Route::get('cidade/{idCidade}', [CidadeController::class, 'destroyCidade'])->name('deletar.cidade');
+Route::controller(CidadeController::class)->group(function () {
+    Route::get('/', 'listCidades')->name('index');
+    Route::get('adicionar', 'addCidade')->name('adicionar.cidade');
+    Route::post('cidade/salvar', 'storeCidade')->name('salvar.cidade');
+    Route::get('cidade/{idCidade}', 'destroyCidade')->name('deletar.cidade');
+    Route::get('/cidade/editar/{idCidade}', 'editCidade')->name('editar.cidade');
+    Route::post('/cidade/editar/{idCidade}', 'editarCidade')->name('update.cidade');
+});
