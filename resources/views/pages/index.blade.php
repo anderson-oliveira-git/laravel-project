@@ -19,9 +19,9 @@
                     <tr>
                         <td class="left-align">{{ $cidade->nome }}</td>
                         <td class="right-align">
-                            <a href=""><i class="material-icons teal-text">edit</i></a>
+                            <a href="{{ route('editar.cidade', $cidade->id) }}"><i class="material-icons grey-text">edit</i></a>
                             <a href="{{ route('deletar.cidade', $cidade->id) }}">
-                                <i class="material-icons red-text">delete_forever</i>
+                                <i class="material-icons grey-text">delete_forever</i>
                             </a>
                         </td>
                     </tr>

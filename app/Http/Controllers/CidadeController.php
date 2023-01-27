@@ -54,4 +54,24 @@ class CidadeController extends Controller
 
         return redirect()->route('index');
     }
+
+    public function editCidade($idCidade) 
+    {
+        $cidade = Cidade::find($idCidade);
+
+        return view('pages.edit', compact('cidade'));
+    }
+
+    public function editarCidade(Request $request, $idCidade)
+    {
+        $cidade = Cidade::find($idCidade);
+
+        $cidade->update([
+            'nome' => $request->nome
+        ]);
+
+        session()->flash('atualizado', "A cidade foi atualizada com sucesso!");
+
+        return redirect()->route('index');
+    }
 }
