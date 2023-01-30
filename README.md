@@ -74,3 +74,6 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ## Tela de edição do nome da cidade
 ![Sem título](https://user-images.githubusercontent.com/6682086/214997173-eb3a75a8-ff10-469c-abf9-969a84806ebe.png)
 
+## Tela de cadastro de imóveis
+![Sem título](https://user-images.githubusercontent.com/6682086/215370891-3c3059ba-392d-4916-a89a-9f62c6f7cc48.png)
+
