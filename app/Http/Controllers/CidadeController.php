@@ -8,10 +8,10 @@ use App\Http\Requests\CidadeRequest;
 
 class CidadeController extends Controller
 {
-    /**
+     /**
      * Função que lista todas as cidades cadastradas na tabela inicial .:.
      */
-    public function listCidades()
+    public static function listCidades()
     {
         $cidades = Cidade::all();
 

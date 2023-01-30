@@ -5,18 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Cidade extends Model
+class Tipo extends Model
 {
     use HasFactory;
 
-    protected $table = 'cidades';
-    
+    protected $table = 'tipos';
     protected $fillable = [
         'nome'
     ];
 
     public function imoveis()
     {
-        return $this->hasMany(Imovel::class, 'cidade_id');
+        return $this->hasMany(Imovel::class);
     }
 }

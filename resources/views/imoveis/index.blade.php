@@ -1,11 +1,9 @@
 @extends('main')
 
-@section('title', 'Imob | Cidades')
-
 @section('content')
     <section class="section container">
         <div class="center">
-            <h5>Cidades</h5>
+            <h5>Imóveis</h5>
         </div>
         <table class="highligth">
             <thead>
@@ -15,29 +13,28 @@
                 </tr>
             </thead>
             <tbody>
-                @forelse($cidades as $cidade)                    
+                @forelse($imoveis as $imovel)                    
                     <tr>
-                        <td class="left-align">{{ $cidade->nome }}</td>
+                        <td class="left-align">{{ $imovel->nome }}</td>
                         <td class="right-align">
-                            <a href="{{ route('editar.cidade', $cidade->id) }}"><i class="material-icons grey-text">edit</i></a>
-                            <a href="{{ route('deletar.cidade', $cidade->id) }}">
+                            <a href="{{ route('editar.cidade', $imovel->id) }}"><i class="material-icons grey-text">edit</i></a>
+                            <a href="{{ route('deletar.cidade', $imovel->id) }}">
                                 <i class="material-icons grey-text">delete_forever</i>
                             </a>
                         </td>
                     </tr>
                 @empty
                     <tr>
-                        <td colspan="2">Não existem cidades cadastradas.</td>
+                        <td colspan="2">Não existem imóveis cadastrados.</td>
                     </tr>
                 @endforelse
             </tbody>
         </table>
 
         <div class="fixed-action-btn">
-            <a class="btn-floating btn-small waves-effect waves-light" href="{{ route('adicionar.cidade') }}">
+            <a class="btn-floating btn-small waves-effect waves-light" href="{{ route('imoveis.create') }}">
                 <i class="material-icons">add</i>
             </a>
         </div>
-
     </section>
 @endsection
