@@ -5,18 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Cidade extends Model
+class Proximidade extends Model
 {
     use HasFactory;
 
-    protected $table = 'cidades';
-    
+    protected $table = 'proximidades';
+
     protected $fillable = [
         'nome'
     ];
 
     public function imoveis()
     {
-        return $this->hasMany(Imovel::class, 'cidade_id');
+        return $this->belongsToMany(Imovel::class, 'imovel_proximidade')->withTimestamps();
     }
 }

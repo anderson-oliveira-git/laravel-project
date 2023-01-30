@@ -5,10 +5,10 @@
         </a>
         <ul class="right hide-on-med-and-down">
             <li>
-                <a href="">Cidades</a>
+                <a href="{{ route('index') }}">Cidades</a>
             </li>
             <li>
-                <a href="">Imóveis</a>
+                <a href="{{ route('imoveis.index') }}">Imóveis</a>
             </li>
         </ul>
     </div>
